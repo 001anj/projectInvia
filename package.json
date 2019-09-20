@@ -1,0 +1,28 @@
+{
+  "name": "projectwebdriverio",
+  "version": "1.0.0",
+  "description": "Automated UI test for trivaho",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  },
+  "scripts": {
+    "test": "wdio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/001anj/projectWebdriverIO.git"
+  },
+  "author": "Anjo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/001anj/projectWebdriverIO/issues"
+  },
+  "homepage": "https://github.com/001anj/projectWebdriverIO#readme"
+}
