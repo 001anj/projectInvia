@@ -8,5 +8,5 @@
 4. Create a json file by running the command "npm init" in cmd while in same project directory
 5. Change the line scripts with following line "test": "testcafe chrome Tests/**/*" 
 6. Create a folder "Tests" inside your project directory and copy the test files from repo in it.
-7. Push the changes to GitHub (exclude node_modules files).
+7. Run the test locally using commandline while being on same directory i.e. npm test
 
