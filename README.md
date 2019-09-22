@@ -11,4 +11,6 @@
 7. Run the test locally using commandline while being on same directory i.e. npm test
 
 ## Test report with Allure.
-1. Run command after execution of test to view allure report (allure generate allure/allure-results --clean and allure open allure/allure-report)
+1. Run below command after execution of test to view allure report
+ a) allure generate allure/allure-results --clean 
+ b) allure open allure/allure-report
