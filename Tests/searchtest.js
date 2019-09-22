@@ -55,4 +55,5 @@ test('Should check the search process oh hotel for city Madrid', async t => {
 
     // Click again to see descending price for searched hotels
     await t.click(page.descendingPrice);
+    await t.expect(page.descendingPrice.visible).ok(true);
     });
