@@ -1,0 +1,25 @@
+{
+  "name": "projectinvia",
+  "version": "1.0.0",
+  "description": "Automated UI test ",
+  "main": "index.js",
+  "dependencies": {
+    "testcafe": "^1.5.0",
+    "testcafe-reporter-allure": "^1.0.5",
+    "testcafe-reporter-junit": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "testcafe chrome Tests/**/* -e"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/001anj/projectInvia.git"
+  },
+  "author": "Anjo Mathew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/001anj/projectInvia/issues"
+  },
+  "homepage": "https://github.com/001anj/projectInvia#readme"
+}
