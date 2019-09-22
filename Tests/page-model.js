@@ -25,9 +25,9 @@ export default class Page {
         this.selectBestReview = Selector('#pageWrapper > div.row > div.small-12.xlarge-3.small-order-2.xlarge-order-1.columns.sidebar > div > div:nth-child(2) > div > div.small-order-2.xlarge-order-1 > div.js-baseFrame-filter-hotelRating.filter-box.rating > div.js-baseFrame-filter-content.filter-box-content.filter-icons > label.filter-label.rating-color5');
         this.bestReview = Selector('.js-baseFrame-currentFilters-label').withText('Bewertung exzellent');
         
-        this.ascendingPrice = Selector('#interaction-container > div > div > div.interactElement.sort > div.selectWrapper.show-for-xlarge > ul > li:nth-child(2)');
-        this.descendingPrice = Selector('#interaction-container > div > div > div.interactElement.sort > div.selectWrapper.show-for-xlarge > ul > li.js-baseFrame-sortElement.js-baseFrame-sort-icon.active.changeDirection.asc');
-    
+        this.sortPrice = Selector('#interaction-container > div > div > div.interactElement.sort > div.selectWrapper.show-for-xlarge > ul > li:nth-child(2)');
+        this.SelectDescendingPrice = Selector('#interaction-container > div > div > div.interactElement.sort > div.selectWrapper.show-for-xlarge > ul > li.js-baseFrame-sortElement.js-baseFrame-sort-icon.active.changeDirection.asc');
+        this.descendingPrice = Selector('#interaction-container > div > div > div.interactElement.sort > div.selectWrapper.show-for-xlarge > ul > li.js-baseFrame-sortElement.js-baseFrame-sort-icon.active.changeDirection.desc');
     }
 
 }
