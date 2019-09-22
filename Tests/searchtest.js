@@ -51,9 +51,9 @@ test('Should check the search process oh hotel for city Madrid', async t => {
     await t.expect(page.bestReview.visible).ok(true); // Check whether hotels with best review are actually shown or not
 
     // Click on price filter
-    await t.click(page.ascendingPrice);
+    await t.click(page.sortPrice);
 
     // Click again to see descending price for searched hotels
-    await t.click(page.descendingPrice);
-    await t.expect(page.descendingPrice.visible).ok(true);
+    await t.click(page.SelectDescendingPrice);
+    await t.expect(page.descendingPrice.visible).ok(true); // Check whether sorting of price is in descending order or not
     });
