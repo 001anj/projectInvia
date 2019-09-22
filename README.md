@@ -10,9 +10,3 @@
 6. Create a folder "Tests" inside your project directory and copy the test files from repo in it.
 7. Push the changes to GitHub (exclude node_modules files).
 
-### Integration with CircleCI
-1. Create a folder .circleci with file config.yml. For more information (https://devexpress.github.io/testcafe/documentation/continuous-integration/circleci.html)
-2. Replace the text of config.yml with mentioned in this repository.
-3. Log in to CircleCI using your GitHub account. If this is the first time you are using CircleCI, you will start from an empty workspace. Add the following project "projectInvia" in it.
-4. Click on button "start building" to trigger a build.
-5. Check the test results.
