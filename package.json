@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "testcafe chrome Tests/**/* -e"
+    "test": "testcafe chrome:headless Tests/**/* -e --reporter allure"
   },
   "repository": {
     "type": "git",
