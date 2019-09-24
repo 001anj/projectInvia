@@ -6,11 +6,12 @@
   "dependencies": {
     "testcafe": "^1.5.0",
     "testcafe-reporter-allure": "^1.0.5",
-    "testcafe-reporter-junit": "^3.0.0"
+    "testcafe-reporter-junit": "^3.0.0",
+    "testcafe-reporter-xunit": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "testcafe chrome:headless Tests/**/* -e --reporter allure"
+    "test": "testcafe chrome Tests/**/* -e"
   },
   "repository": {
     "type": "git",
