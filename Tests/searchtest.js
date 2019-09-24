@@ -27,14 +27,16 @@ test('Should check the search process oh hotel for city Madrid', async t => {
 
     // Enter arrival date
     await t.click(page.openArrivalDateCalendar);
+    await t.click('#hotel > div.form > div._input-box._input-box-icon-set._input-box-size-._input-box-datePickerTwoInputs.datepicker-startpage > div > div > div.datepicker-layer.start-input > div.datepicker-header > span.month-button.month-button-prev.icon-arrow-left-bold');
     await t.click(page.selectArrivalDate);
 
     // Enter departure date
+    await t.click('#hotel > div.form > div._input-box._input-box-icon-set._input-box-size-._input-box-datePickerTwoInputs.datepicker-startpage > div > div > div.datepicker-layer.end-input > div.datepicker-header > span.month-button.month-button-prev.icon-arrow-left-bold');
     await t.click(page.selectDepartureDate);
 
     // click on search button after entering required fields
     await t.click(page.pressSearch);
-    await t.expect(page.searchResults.visible).ok(true); // Check whether searched result page is displayed or not
+    await t.expect(page.searchResults.visible).ok(); // Check whether searched result page is displayed or not
 
     // Confirming the search filters i.e. city, start and end date is same as entered before
     const getLocation = ClientFunction(() => document.location.href);
@@ -44,16 +46,16 @@ test('Should check the search process oh hotel for city Madrid', async t => {
 
     // Select five star hotel option from filter
     await t.click(page.selectFiveStarHotel);
-    await t.expect(page.fiveStarRatings.visible).ok(true); // Check whether five star hotels are actually shown or not
+    await t.expect(page.fiveStarRatings.visible).ok(); // Check whether five star hotels are actually shown or not
 
     // Select best ratings option from filter 
     await t.click(page.selectBestReview); 
-    await t.expect(page.bestReview.visible).ok(true); // Check whether hotels with best review are actually shown or not
+    await t.expect(page.bestReview.visible).ok(); // Check whether hotels with best review are actually shown or not
 
     // Click on price filter
     await t.click(page.sortPrice);
 
     // Click again to see descending price for searched hotels
     await t.click(page.SelectDescendingPrice);
-    await t.expect(page.descendingPrice.visible).ok(true); // Check whether sorting of price is in descending order or not
+    await t.expect(page.descendingPrice.visible).ok(); // Check whether sorting of price is in descending order or not
     });
