@@ -12,14 +12,14 @@ test('Should check the search process of hotel for city Madrid', async t => {
     await t.maximizeWindow()
     
     // Confirming the cookies
-    await t.expect(page.addCookies.visible).ok(true);
+    await t.expect(page.addCookies.visible).ok();
     await t.click(page.addCookies);
 
     // Select the option "hotel(city)"
     await t.click(page.searchHotel); 
 
     // Confirming whether form for option hotel(city) is displayed or not
-    await t.expect(page.searchForm.visible).ok(true);
+    await t.expect(page.searchForm.visible).ok();
 
     // Search hotel in city "Madrid"
     await t.typeText(page.searchCity, "Madrid");
