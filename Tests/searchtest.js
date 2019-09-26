@@ -7,7 +7,7 @@ const page = new Page();
 fixture('Automated UI test for hotel search')
 .page('https://www.ab-in-den-urlaub.de'); //opening the webpage
 
-test('Should check the search process oh hotel for city Madrid', async t => {
+test('Should check the search process of hotel for city Madrid', async t => {
 
     await t.maximizeWindow()
     
@@ -27,11 +27,9 @@ test('Should check the search process oh hotel for city Madrid', async t => {
 
     // Enter arrival date
     await t.click(page.openArrivalDateCalendar);
-    await t.click('#hotel > div.form > div._input-box._input-box-icon-set._input-box-size-._input-box-datePickerTwoInputs.datepicker-startpage > div > div > div.datepicker-layer.start-input > div.datepicker-header > span.month-button.month-button-prev.icon-arrow-left-bold');
     await t.click(page.selectArrivalDate);
 
     // Enter departure date
-    await t.click('#hotel > div.form > div._input-box._input-box-icon-set._input-box-size-._input-box-datePickerTwoInputs.datepicker-startpage > div > div > div.datepicker-layer.end-input > div.datepicker-header > span.month-button.month-button-prev.icon-arrow-left-bold');
     await t.click(page.selectDepartureDate);
 
     // click on search button after entering required fields
@@ -41,8 +39,8 @@ test('Should check the search process oh hotel for city Madrid', async t => {
     // Confirming the search filters i.e. city, start and end date is same as entered before
     const getLocation = ClientFunction(() => document.location.href);
     await t.expect(getLocation()).contains('Madrid');
-    await t.expect(getLocation()).contains('2019-09-25');
-    await t.expect(getLocation()).contains('2019-09-29');
+    await t.expect(getLocation()).contains('2019-10-25');
+    await t.expect(getLocation()).contains('2019-10-29');
 
     // Select five star hotel option from filter
     await t.click(page.selectFiveStarHotel);
