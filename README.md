@@ -6,11 +6,12 @@
 2. Install node.js.
 3. Install the respective latest version of dependencies mentioned in package.json file.
 4. Create a json file by running the command "npm init" in cmd while in same project directory
-5. Change the line scripts with following line "test": "testcafe chrome:headless Tests/**/* -e --reporter allure" 
+5. Change the line scripts with following line "test": "testcafe chrome:headless Tests/**/* -e" 
 6. Create a folder "Tests" inside your project directory and copy the test files from repo in it.
 7. Run the test locally using commandline while being on same directory i.e. npm test
 
 ## Test report with Allure.
-1. Run two commands after execution of test to view allure report
+1. Add a line to test command in json file "test": "testcafe chrome:headless Tests/**/* -e --reporter allure" 
+2. Run two commands after execution of test to view allure report
  a) allure generate allure/allure-results --clean 
  b) allure open allure/allure-report
