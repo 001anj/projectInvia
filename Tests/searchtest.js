@@ -3,6 +3,7 @@ import { ClientFunction, t } from 'testcafe';
 import Page from './page-model';
 
 const page = new Page();
+const getLocation = ClientFunction(() => document.location.href);
 
 fixture('Automated UI test for hotel search')
 .page('https://www.ab-in-den-urlaub.de'); //opening the webpage
@@ -37,7 +38,6 @@ test('Should check the search process of hotel for city Madrid', async t => {
     await t.expect(page.searchResults.visible).ok(); // Check whether searched result page is displayed or not
 
     // Confirming the search filters i.e. city, start and end date is same as entered before
-    const getLocation = ClientFunction(() => document.location.href);
     await t.expect(getLocation()).contains('Madrid');
     await t.expect(getLocation()).contains('2019-10-25');
     await t.expect(getLocation()).contains('2019-10-29');
